@@ -7,3 +7,17 @@ before_install:
 
 script:
   - docker run imshoaib/docker-react npm run test -- --coverage
+
+#AWS
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-west-2"  
+#   app: "docker" #check in the breadcrum app name
+#   env: "Docker-env" #next to app name
+#   bucket_name: "elasticbeanstalk-us-west-2-306476627547"
+#   bucket_path: "docker" #app-name
+#   on: # only deploy the project when code is merge or master branch get new code
+#     branch: master 
+#   access_key_id: $AWS_ACCESS_KEY    
+#   secret_access_key:
+#     secure: "$AWS_ACCESS_KEY"
